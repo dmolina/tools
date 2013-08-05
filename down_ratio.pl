@@ -1,7 +1,11 @@
-# 
+#!/usr/bin/perl -w
 # Detect the file in download and show its total ratio
 #
-# Requires: a download.txt with the total size for file
+# Requires: a file sizes.txt with the total size for file
+# Format of the file: 
+# <size_in_megas_file1> <filename_file1>
+# <size_in_megas_file2> <filename_file2>
+# ...
 #
 # Author: Daniel Molina Cabrera <danimolina@gmail.com>
 # Licence: GNU PUBLIC LICENSE (GPL) v3.0
