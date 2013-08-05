@@ -38,7 +38,9 @@ for $fname (keys(%$sizes)) {
     unless (-f $fdown) {
 	next;
     }
-    my $current = `du -m $fdown`;
-    my $ratio = ($current+0)/$sizes->{$fname};
+    my @output = split(' ', `du -m "$fdown"`);
+    my $current = $output[0]+0;
+
+    my $ratio = $current/$sizes->{$fname};
     print sprintf "%s: %.0f%%\n", $fname, 100*$ratio;
 }
